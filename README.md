@@ -14,9 +14,9 @@ The Scypto component CollaborativeProduct can be used to define a smart contract
 -    external_reference: String
 
 ## Vision / next steps
-- The amount is usually a "time in minutes" - this shall be defined as a parameter of the components
+- The amount is usually of type / unit "time in minutes" - this unit shall be defined as a parameter of the components
 - Other "resource types" may by allowed, e.g. "ProductContributionResource" which is a generic token being "convertible" - to "ProductContributionTime
 - The "universal" token "WorkingTime" (WT) shall be used instead of amount: u32
 - The value of each contribution - token shall be convertible to WT somehow
-- The "total contributions" to a product in terms of WT shall be calculated as some of all converted contributions
+- The "total contributions" to a product in terms of WT shall be calculated as sum of all converted contributions
 - There shall be functions fn BookProductValue(...) and fn GetProductValueShare(...) for booking "real value earned + shared" (in arbitrary tokens e.g. in xEUR, XRD,...) with the product to another component vault and for transferring the "real value earned + shared"  to the accounts of the contributors. How much may distributed depends on how much WT the account has contributed in relation to the "total contributions" 
