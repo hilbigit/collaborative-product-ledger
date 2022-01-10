@@ -1,0 +1,30 @@
+@startuml
+
+class CollaborativeProduct << Component >> {
+    productContributionVault: Vault<ProductContribution>
+    workingHourVault: Vault<WorkingHour>
+}
+
+class WorkingHour << Fungible Token >> {
+    symbol="WH"
+}
+
+class ProductContribution << NFT >>
+{
+   symbol="PC"
+   value_wh: u32
+   task_description: String
+   external_reference: String
+}
+
+class ProductShare << NFT >>
+{
+   symbol="PS"
+   productAddress: Address
+   value_wh: u32
+}
+
+ProductContribution <|-- CostOnlyProductContribution
+ProductContribution <|-- ProductToProductContribution
+
+@enduml

@@ -1,15 +1,13 @@
 use scrypto::prelude::*;
 
 #[derive(NftData)]
-pub struct ProductContributionTime {
+pub struct ProductContribution {
     pub amount: u32,
     pub task_description: String,
     pub external_reference: String,
 }
 
-
 blueprint! {
-
     struct CollaborativeProduct {
         // Metadata
         pub name: String,
@@ -100,4 +98,3 @@ blueprint! {
         }
     }
 }
-
